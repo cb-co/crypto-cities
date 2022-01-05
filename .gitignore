@@ -30,3 +30,8 @@ jspm_packages/
 # Logs
 logs
 *.log
+
+cache/
+artifacts/
+.temp
+.cache
