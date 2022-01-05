@@ -1,0 +1,25 @@
+{
+  "name": "crypto-cities",
+  "version": "1.0.0",
+  "description": "An NFT marketplace.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cb-co/crypto-cities.git"
+  },
+  "keywords": [
+    "React",
+    "Solidity",
+    "Node",
+    "js"
+  ],
+  "author": "cm-corp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cb-co/crypto-cities/issues"
+  },
+  "homepage": "https://github.com/cb-co/crypto-cities#readme"
+}
