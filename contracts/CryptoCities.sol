@@ -51,7 +51,7 @@ contract CryptoCities is ERC721, ERC721Enumerable {
       abi.encodePacked(
         '{ "name": "', cities[tokenId].name, '",',
         '"name": "', cities[tokenId].description, '",',
-        '"image": "ipfs://URItoReplace/city-', tokenId, '.png",',
+        '"image": "ipfs://QmVpDJfMPvf9x1vWZQQ9W7wUXvMxWQ44Rxe6e3U4Gsvfi2/', tokenId, '.png",',
         '"attributes": [{"trait_type": "area", "value": ', cities[tokenId].area, '},',
         '{"trait_type": "population", "value": ', cities[tokenId].population, '},',
         '{"trait_type": "GDP", "value": ', cities[tokenId].gdp, '}]}'
