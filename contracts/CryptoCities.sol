@@ -11,7 +11,7 @@ contract CryptoCities is ERC721, ERC721Enumerable {
   using Counters for Counters.Counter;
 
   Counters.Counter private _idCounter;
-  uint16 public maxSupply;
+  uint8 public maxSupply;
 
   mapping(uint256 => City) public cities;
   struct City {
@@ -22,8 +22,8 @@ contract CryptoCities is ERC721, ERC721Enumerable {
     uint16 gdp;
   }
 
-  constructor(uint16 _maxSupply) ERC721("CryptoCities", "CTS") {
-    maxSupply = _maxSupply;
+  constructor() ERC721("CryptoCities", "CTS") {
+    maxSupply = 10;
     cities[0] = City('Prague, CZ', 'Capital city of the Czech Republic, known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches and the medieval Astronomical Clock.', 492, 1309418, 60);
     cities[1] = City('Istanbul, TR', 'Major city in Turkey that straddles Europe and Asia across the Bosphorus Strait. Its Old City reflects cultural influences of the many empires that once ruled here.', 5343, 15462452, 237);
     cities[2] = City('Rome, IT', 'Is the capital and largest city of Italy and of the Lazio region. It is famous for being the home of the ancient Roman Empire, the Seven Hills, La Dolce Vita (the sweet life), the Vatican City and Three Coins in the Fountain.', 1285, 4342212, 163);
