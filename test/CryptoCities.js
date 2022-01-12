@@ -14,7 +14,7 @@ describe('CryptoCities Contract', () => {
 
   describe('Deployment', () => {
     it('Sets max supply to passed param', async () => {
-      const maxSupply = 10;
+      const maxSupply = 8;
 
       const { deployed } = await setup({ maxSupply });
 
@@ -46,6 +46,18 @@ describe('CryptoCities Contract', () => {
       await expect(deployed.mint()).to.be.revertedWith(
         'No CryptoCities left :(.'
       );
+    });
+  });
+
+  describe('Token URI', () => {
+    it('It returns a valid URI', async () => {
+      const { deployed } = await setup({});
+
+      const returnedURI = await deployed
+        .mint()
+        .then(() => deployed.tokenURI(0));
+
+      console.log(returnedURI);
     });
   });
 });
